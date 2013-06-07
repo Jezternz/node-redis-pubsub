@@ -1,0 +1,13 @@
+{
+    "name": "node-redis-pubsub",
+    "version": "0.0.1",
+    "description": "Small plugin that ensures separate channel pub-sub and single redisClient connection for any number of connected clients.",
+    "main": "index.js",
+    "author": "Jezternz <jezternz@gmail.com>",
+    "homepage": "https://github.com/Jezternz/node-redis-pubsub",
+    "repository" : {
+        "type" : "git",
+        "url" : "git://github.com/Jezternz/node-redis-pubsub.git"
+    },
+    "dependencies": {}
+}

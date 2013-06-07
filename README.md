@@ -31,4 +31,4 @@ Example with socket.io:
         redTwo.publish('cool_channel', 'sweet message!');
     },10000);
     
-    Any issues please let me know :)
+Any issues please let me know :)

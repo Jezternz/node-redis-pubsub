@@ -11,7 +11,7 @@ Example with socket.io:
         redOne = redis.createClient(port, host),
         redTwo = redis.createClient(port, host);
 
-    rPubSub.init(redOne, redTwo);
+    rPubSub.init(redOne);
 
     io.sockets.on('connection', function(socket){
         var cps = rPubSub.createClient();

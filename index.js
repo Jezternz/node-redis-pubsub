@@ -30,11 +30,18 @@ module.exports = new function()
     // private
     var incommingMessage = function(rawchannel, strMessage)
     {
-        len = globalSubscriptions[rawchannel].length;
-        for(var i=0;i<len;i++)
+        if (typeof globalSubscriptions[rawchannel] !== "undefined")
         {
-            //console.log(globalSubscriptions[rawchannel][i]+' incomming on channel '+rawchannel);
-            clientLookup[globalSubscriptions[rawchannel][i]]._incommingMessage(rawchannel, strMessage);
+            len = globalSubscriptions[rawchannel].length;
+            for (var i = 0; i < len; i++)
+            {
+                //console.log(globalSubscriptions[rawchannel][i]+' incomming on channel '+rawchannel);
+                clientLookup[globalSubscriptions[rawchannel][i]]._incommingMessage(rawchannel, strMessage);
+            }
+        }
+        else
+        {
+            //console.log(rawchannel+' channel had an incomming message with no listeners');
         }
     }
     
